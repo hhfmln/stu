@@ -16,6 +16,10 @@ public class Student {
     private String info;
     private Date birthday;
 
+    public Student(){
+
+    }
+
     public Student(String sname,String gender,String phone, String hobby, String info,Date date){
         super();
         this.sname = sname;
@@ -81,4 +85,6 @@ public class Student {
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
+
+
 }
