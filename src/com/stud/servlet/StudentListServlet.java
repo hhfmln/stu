@@ -32,7 +32,7 @@ public class StudentListServlet extends HttpServlet {
             //储存到作用域中
             request.setAttribute("list",list);
 
-            System.out.println("版本2");
+            System.out.println("版本3");
 
             //跳转界面
             request.getRequestDispatcher("jsp/list.jsp").forward(request,response);
