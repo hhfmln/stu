@@ -20,6 +20,17 @@ public class Student {
 
     }
 
+    public Student(int sid,String sname,String gender,String phone, String hobby, String info,Date date){
+        super();
+        this.sid = sid;
+        this.sname = sname;
+        this.gender = gender;
+        this.phone = phone;
+        this.hobby = hobby;
+        this.info = info;
+        this.birthday = date;
+    }
+
     public Student(String sname,String gender,String phone, String hobby, String info,Date date){
         super();
         this.sname = sname;

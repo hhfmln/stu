@@ -18,7 +18,22 @@ public interface StudentDao {
     List<Student> findAll()throws SQLException;
 
     /*
+    * 根据id查询单个学生对象
+    * */
+    Student findStudentById(int sid)throws SQLException;
+
+    /*
     * 添加学生
     * */
     void insert(Student student) throws SQLException;
+
+    /*
+    *  根据id删除学生
+     */
+    void delete(int sid) throws SQLException;
+
+    /*
+    * 更新学生信息
+    * */
+    void update(Student student)throws SQLException;
 }

@@ -5,12 +5,16 @@
   Time: 下午8:55
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+
 <html>
 <head>
     <title>添加学生页面</title>
 </head>
 <body>
+
+    <h3>添加学生界面</h3>
+
     <form method="post" action="AddServlet">
         <table border="1" width="600">
             <tr>
@@ -47,7 +51,7 @@
                 <td><textarea name="info" rows="3" cols="20"></textarea></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value=""></td>
+                <td colspan="2"><input type="submit" value="添加"></td>
             </tr>
         </table>
     </form>

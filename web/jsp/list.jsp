@@ -10,13 +10,29 @@
 <html>
 <head>
     <title>学生列表界面</title>
+    
+    <script type="text/javascript">
+        
+        function doDelete(sid) {
+            /*如果这里弹出的对话框，用户点击的是确定，就马上去请求Servlet。
+            如何知道用户点击的是确定
+            如何在js的方法中请求servlet
+             */
+            var flag = confirm("是否确定删除");
+            if(flag){
+                //表明点了确定.访问servlet.在当前标签页上打开超链接,
+                window.location.href="DeleteServlet?sid="+sid;
+                location.href="DeleteServlet?sid="+sid;
+            }
+        }
+    </script>
 </head>
 <body>
     <h3>学生列表</h3>
     <table border="1" width="700">
         <tr align="center">
             <td colspan="8">
-                <a href="jsp/add.jsp">添加</a>
+                <a href="../add.jsp">添加</a>
             </td>
         </tr>
         <tr align="center">
@@ -38,7 +54,7 @@
                 <td>${stu.birthday}</td>
                 <td>${stu.hobby}</td>
                 <td>${stu.info}</td>
-                <td><a href="#">更新</a> <a href="#">删除</a> </td>
+                <td><a href="EditServlet?sid=${stu.sid}">更新</a> <a href="#" onclick="doDelete(${stu.sid})">删除</a> </td>
             </tr>
         </c:forEach>
 
